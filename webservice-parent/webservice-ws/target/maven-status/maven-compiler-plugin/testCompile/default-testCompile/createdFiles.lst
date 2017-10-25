@@ -1,0 +1,7 @@
+com\oney\archi\webservice\web\rest\AuditResourceIntTest.class
+com\oney\archi\webservice\web\rest\AccountResourceIntTest.class
+com\oney\archi\webservice\web\rest\TestUtil.class
+com\oney\archi\webservice\web\rest\UserResourceIntTest.class
+com\oney\archi\webservice\domain\util\FixedH2Dialect.class
+com\oney\archi\webservice\service\UserServiceIntTest.class
+com\oney\archi\webservice\security\SecurityUtilsUnitTest.class

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.oney</groupId>
+        <artifactId>oney-parent-18</artifactId>
+        <version>1.0.3-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.oney.archi</groupId>
+    <artifactId>webservice-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <scm>
+        <developerConnection>scm:svn:http://svn.banque-accord.com/jee/__CHANGEME__/trunk</developerConnection>
+    </scm>
+
+    <properties>
+        <!-- Dependencies and plugins versions -->
+        <hibernate.version>4.3.11.Final</hibernate.version>
+        <hibernate-validator.version>5.2.4.Final</hibernate-validator.version>
+        <spring-data-jpa.version>1.9.4.RELEASE</spring-data-jpa.version>
+    </properties>
+
+  <modules>
+    <module>webservice-core</module>
+    <module>webservice-config</module>
+    <module>webservice-ws</module>
+  </modules>
+</project>
