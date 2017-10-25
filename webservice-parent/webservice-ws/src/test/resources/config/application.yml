@@ -1,0 +1,75 @@
+# ===================================================================
+# Spring Boot configuration.
+#
+# This configuration is used for unit/integration tests.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+spring:
+    application:
+        name: webservice
+    datasource:
+        url: jdbc:h2:mem:unittest;DB_CLOSE_DELAY=-1
+        name:
+        username:
+        password:
+    jpa:
+        database-platform: com.oney.archi.webservice.domain.util.FixedH2Dialect
+        database: H2
+        open-in-view: false
+        show_sql: true
+        hibernate:
+            ddl-auto: none
+            naming-strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
+        properties:
+            hibernate.cache.use_second_level_cache: false
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.hbm2ddl.auto: validate
+    mail:
+        host: localhost
+    mvc:
+        favicon:
+            enabled: false
+    thymeleaf:
+        mode: XHTML
+
+security:
+    basic:
+        enabled: false
+
+server:
+    port: 10344
+    address: localhost
+
+mq:
+    qmanager: 
+        id: MQWT
+        name: "Queue manager de test"
+        hostname: sv0011.banque-accord.com
+        port: 1417
+        client-channel: MQWT.SCCS010
+
+# Database migration (https://github.com/spring-projects/spring-boot/blob/v1.3.5.RELEASE/spring-boot-autoconfigure/src/main/java/org/springframework/boot/autoconfigure/flyway/FlywayProperties.java)
+flyway:
+    locations: sql/
+
+
+# ===================================================================
+# JHipster specific properties
+# ===================================================================
+
+jhipster:
+    security:
+        authentication:
+            jwt:
+                secret: 257453c60b61b30eca2f016d903f71fb47b20fcd
+                # Token is valid 24 hours
+                tokenValidityInSeconds: 86400
+    metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
+        jmx.enabled: true
